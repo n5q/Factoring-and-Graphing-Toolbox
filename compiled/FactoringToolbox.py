@@ -1,8 +1,3 @@
-#################################################################################
- #FACTORING TOOLBOX
- #NASIF QADRI AND BASSAM EL-NAGGAR
- #LAST MODIFIED - NOVEMBER 25, 2019 02:06:40 UTC
-##################################################################################
 
 
 
@@ -344,9 +339,6 @@ def factor(trinomial):
           return(factorRoot(root2) + factorRoot(root1))
         else:
           return(coefficient + factorRoot(root1) + factorRoot(root2))
-
-def end():
-  print("\n" + "\n" + "##################################################################################" + "\n" + "#                                 END OF PROGRAM                                 #")
 
 
 
