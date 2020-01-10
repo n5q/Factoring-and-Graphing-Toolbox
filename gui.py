@@ -1,13 +1,7 @@
 from tkinter import *
-from os import name as os
-import requests
 from FactoringToolbox import *
 from GraphingCalculatorToolbox import *
 
-# if os == "nt":
-#     icon = "Resources/icon.ico"
-# else:
-#     icon = "@/Resources/icon.xbm"
 
 
 root= Tk()
@@ -15,7 +9,6 @@ root.title("Trinomial Factoring and Graphing Toolbox")
 
 screen = Canvas(root, width = 400, height = 300,bg = "#263238")
 screen.pack()
-# root.iconbitmap(icon)
 
 label1 = Label(root, text="Trinomial Factoring and Graphing Toolbox",font=("helvetica", 14),bg = "#263238",fg="white")
 screen.create_window(200, 25, window=label1)
@@ -56,8 +49,7 @@ def graphOutput():
     graphOptions.title("Graph Options")
     screen = Canvas(graphOptions,width=200,height=600,bg="#263238")
     screen.pack()
-    # graphOptions.iconbitmap(icon)
-
+    
     sizeInput = Entry(graphOptions)
     sizeInputLabel = Label(graphOptions, text = "Enter screen size:",font = ("helvetica", 11),bg="white")
     screen.create_window(100,25, window = sizeInputLabel)
