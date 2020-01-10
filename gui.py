@@ -42,7 +42,7 @@ def graphOutput():
     global xIncInput
     global yIncInput
     global numPointInput
-    global equationInput
+    #global equationInput
 
     graphOptions = Tk()
     graphOptions.title("Graph Options")
