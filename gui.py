@@ -3,7 +3,6 @@ from FactoringToolbox import *
 from GraphingCalculatorToolbox import *
 
 
-
 root= Tk()
 root.title("Trinomial Factoring and Graphing Toolbox")
 
