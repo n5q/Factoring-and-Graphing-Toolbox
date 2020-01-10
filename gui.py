@@ -1,6 +1,7 @@
-from tkinter import Canvas, Tk, Label, Entry, Button
+from tkinter import *
 from FactoringToolbox import *
 from GraphingCalculatorToolbox import *
+
 
 
 root= Tk()
@@ -42,7 +43,7 @@ def graphOutput():
     global xIncInput
     global yIncInput
     global numPointInput
-    #global equationInput
+    global equationInput
 
     graphOptions = Tk()
     graphOptions.title("Graph Options")
