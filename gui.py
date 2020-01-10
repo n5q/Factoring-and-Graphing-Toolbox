@@ -2,8 +2,6 @@ from tkinter import *
 from FactoringToolbox import *
 from GraphingCalculatorToolbox import *
 
-
-
 root= Tk()
 root.title("Trinomial Factoring and Graphing Toolbox")
 
@@ -16,9 +14,10 @@ screen.create_window(200, 25, window=label1)
 label2 = Label(root, text="Enter your trinomial:",font = ("helvetica", 11),bg = "#263238",fg="white")
 screen.create_window(200, 100, window=label2)
 
-trinomialEntry = Entry (root)
-screen.create_window(200, 140, window=trinomialEntry)
+trinomialEntry = Entry (root,bd=0)
+screen.create_window(200, 140, window=trinomialEntry,)
 trinomialEntry.config({"background": "#425761"})
+trinomialEntry.config(bd=0)
 
 def drawGraph():
     
@@ -35,7 +34,6 @@ def drawGraph():
 def graphOutput():
 
     global graphOptions
-
     global sizeInput
     global xMinInput
     global xMaxInput
@@ -50,46 +48,51 @@ def graphOutput():
     screen = Canvas(graphOptions,width=200,height=600,bg="#263238")
     screen.pack()
     
-    sizeInput = Entry(graphOptions)
-    sizeInputLabel = Label(graphOptions, text = "Enter screen size:",font = ("helvetica", 11),bg="white")
+    sizeInput = Entry(graphOptions,bd=0)
+    sizeInputLabel = Label(graphOptions, text = "Enter screen size:",font = ("helvetica", 11),bg="#263238",fg="white")
     screen.create_window(100,25, window = sizeInputLabel)
     screen.create_window(100,50, window = sizeInput)
+    sizeInput.config({"background": "#425761"})
 
-    xMinInput = Entry(graphOptions)
-    xMinInputLabel = Label(graphOptions, text = "Enter minimum x:",font = ("helvetica", 11),bg="white")
+    xMinInput = Entry(graphOptions,bd=0)
+    xMinInputLabel = Label(graphOptions, text = "Enter minimum x:",font = ("helvetica", 11),bg="#263238",fg="white")
     screen.create_window(100,100, window = xMinInputLabel)
     screen.create_window(100,125, window = xMinInput)
+    xMinInput.config({"background": "#425761"})
 
-    xMaxInput = Entry(graphOptions)
-    xMaxInputLabel = Label(graphOptions, text = "Enter maximum x:",font = ("helvetica", 11),bg="white")
+    xMaxInput = Entry(graphOptions,bd=0)
+    xMaxInputLabel = Label(graphOptions, text = "Enter maximum x:",font = ("helvetica", 11),bg="#263238",fg="white")
     screen.create_window(100,175, window = xMaxInputLabel)
     screen.create_window(100,200, window = xMaxInput)
+    xMaxInput.config({"background": "#425761"})
 
-    yMinInput = Entry(graphOptions)
-    yMinInputLabel = Label(graphOptions, text = "Enter minimum y:",font = ("helvetica", 11),bg="white")
+    yMinInput = Entry(graphOptions,bd=0)
+    yMinInputLabel = Label(graphOptions, text = "Enter minimum y:",font = ("helvetica", 11),bg="#263238",fg="white")
     screen.create_window(100,250, window = yMinInputLabel)
     screen.create_window(100,275, window = yMinInput)
+    yMinInput.config({"background": "#425761"})
 
-    xIncInput = Entry(graphOptions)
-    xIncInputLabel = Label(graphOptions, text = "Enter x increment:",font = ("helvetica", 11),bg="white")
+    xIncInput = Entry(graphOptions,bd=0)
+    xIncInputLabel = Label(graphOptions, text = "Enter x increment:",font = ("helvetica", 11),bg="#263238",fg="white")
     screen.create_window(100,325, window = xIncInputLabel)
     screen.create_window(100,350, window = xIncInput)
+    xIncInput.config({"background": "#425761"})
 
-    yIncInput = Entry(graphOptions)
-    yIncInputLabel = Label(graphOptions, text = "Enter y increment:",font = ("helvetica", 11),bg="white")
+    yIncInput = Entry(graphOptions,bd=0)
+    yIncInputLabel = Label(graphOptions, text = "Enter y increment:",font = ("helvetica", 11),bg="#263238",fg="white")
     screen.create_window(100,400, window = yIncInputLabel)
     screen.create_window(100,425, window = yIncInput)
+    yIncInput.config({"background": "#425761"})
 
-    numPointInput = Entry(graphOptions)
-    numPointInputLabel = Label(graphOptions, text = "Enter number of points:",font = ("helvetica", 11),bg="white")
+    numPointInput = Entry(graphOptions,bd=0)
+    numPointInputLabel = Label(graphOptions, text = "Enter number of points:",font = ("helvetica", 11),bg="#263238",fg="white")
     screen.create_window(100,475, window = numPointInputLabel)
     screen.create_window(100,500, window = numPointInput)
+    numPointInput.config({"background": "#425761"})
 
-    drawGraphButton = Button(graphOptions, text = "Graph", command = drawGraph, bg = "#263238", fg = "green",font = ("helvetica", 9, "bold") )
+    drawGraphButton = Button(graphOptions, text = "Graph", command = drawGraph, bg = "#182024",fg = "green",font = ("helvetica", 9, "bold"),highlightthickness= 0,borderwidth=4,relief="flat")
     screen.create_window(100,550, window = drawGraphButton)
     
-    
-
 
 def factorOutput():
     
@@ -105,12 +108,6 @@ screen.create_window(200,200,window=factorButton)
 
 graphButton = Button(root, text = "Graph",relief="flat",highlightthickness= 0,borderwidth=4, bg = "#182024", fg = "green", font = ("helvetica", 9, "bold"), command = graphOutput)
 screen.create_window(200,250, window=graphButton)
-
-
-
-
-
-
 
 
 root.mainloop()
