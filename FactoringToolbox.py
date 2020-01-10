@@ -1,8 +1,5 @@
-
-
-
 #IMPORTS MATH LIBRARY
-from math import *
+from math import sqrt
 
 #DETERMINES IF B AND/OR C VALUES ARE PRESENT
 def getTerms(trinomial):

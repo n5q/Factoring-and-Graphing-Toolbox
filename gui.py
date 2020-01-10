@@ -1,7 +1,7 @@
-from tkinter import *
-from FactoringToolbox import *
+from tkinter import Tk, Canvas, Label, Entry, Button
+from FactoringToolbox import factor
 #from GraphingCalculatorToolbox import *
-from GraphingCalculatorToolboxImproved import *
+from GraphingCalculatorToolboxImproved import graphingCalculator
 
 root= Tk()
 root.title("Trinomial Factoring and Graphing Toolbox")
@@ -42,7 +42,7 @@ def graphOutput():
     global xIncInput
     global yIncInput
     global numPointInput
-    global equationInput
+    #global equationInput
 
     graphOptions = Tk()
     graphOptions.title("Graph Options")
