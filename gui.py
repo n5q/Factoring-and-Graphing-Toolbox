@@ -1,6 +1,7 @@
 from tkinter import *
 from FactoringToolbox import *
-from GraphingCalculatorToolbox import *
+#from GraphingCalculatorToolbox import *
+from GraphingCalculatorToolboxImproved import *
 
 root= Tk()
 root.title("Trinomial Factoring and Graphing Toolbox")
@@ -21,13 +22,13 @@ trinomialEntry.config(bd=0)
 
 def drawGraph():
     
-    input_screen_size(int(sizeInput.get()))
+    graph = graphingCalculator(int(sizeInput.get()))
 
-    draw_axes(int(xMinInput.get()),int(xMaxInput.get()),int(yMinInput.get()),int(xIncInput.get()),int(yIncInput.get()))
+    graph.draw_axes(int(xMinInput.get()),int(xMaxInput.get()),int(yMinInput.get()),int(xIncInput.get()),int(yIncInput.get()))
 
-    makeTableofValues(int(numPointInput.get()),str(trinomialEntry.get()))
+    graph.makeTableofValues(int(numPointInput.get()),str(trinomialEntry.get()))
 
-    plotPoints()
+    graph.plotPoints()
 
     graphOptions.destroy()
 
