@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Canvas, Tk, Label, Entry, Button
 from FactoringToolbox import *
 from GraphingCalculatorToolbox import *
 

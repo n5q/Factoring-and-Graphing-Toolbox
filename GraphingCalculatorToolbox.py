@@ -1,6 +1,5 @@
-from tkinter import *
-from time import *
-from math import *
+from tkinter import Tk, Canvas
+from time import sleep
 import re
 
 
@@ -186,7 +185,7 @@ def makeTableofValues (numPoints, eq):
     x = xMinTOV
 
     #uses abc values to find x and y values
-    for i in range  (numPoints):
+    for _ in range  (numPoints):
         yValue = a*x**2 + b*x + c
         xValues.append (x) ##Scale the points based on the origin -- we don't have an origin yet
         yReal = yValue #to scale, multiply by the width of the Ysquares and add it to the origin
