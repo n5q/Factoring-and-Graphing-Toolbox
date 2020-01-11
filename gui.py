@@ -1,7 +1,6 @@
 from tkinter import Tk, Canvas, Label, Entry, Button
 from FactoringToolbox import factor
-#from GraphingCalculatorToolbox import *
-from GraphingCalculatorToolboxImproved import graphingCalculator
+from GraphingCalculatorToolbox import graphingCalculator
 
 root= Tk()
 root.title("Trinomial Factoring and Graphing Toolbox")
